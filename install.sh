@@ -4,7 +4,9 @@ echo Впиши токен telegram бота
 
 read vartoken
 
-echo $vartoken > settings/tken.txt
+mkdir settings
+
+echo $vartoken >> settings/token.txt
 
 echo Токен записан
 
@@ -12,15 +14,15 @@ echo Впиши ID админа
 
 read varadmin
 
-echo $varadmin > settings/admn.txt
+echo $varadmin >> settings/admin.txt
 
 echo ID админа записан
 
 echo Установка зависимостей
 
-pip install -r requirements.txt
+poetry update
 
 echo Зависимости установлены
 
 echo Для запуска воспользуйтесь командой
-echo python3 main.py
+echo poetry run python3 main.py
