@@ -5,7 +5,7 @@ import telebot
 
 token = open('settings/token.txt').readline()
 bot = telebot.TeleBot(token)  # инит
-admin = open('settings/token.txt').readline() # админ
+admin = open('settings/admin.txt').readline() # админ
 
 
 @bot.message_handler(commands=['start', 'help'])  # старт
